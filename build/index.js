@@ -1,4 +1,7 @@
 "use strict";
+// * BASIC BUBBLE SORT IN TYPESCRIPT WITH ARRAYS, STRINGS, LINKEDLIST
+// Bubble sort - take in an array of values if the item to the left is greater than item to the right swap positions
+Object.defineProperty(exports, "__esModule", { value: true });
 /*
  SET UP
  1.Created a index.ts
@@ -27,9 +30,28 @@ Need to actually run the index.js file not just compile it
       },
 18.COMMAND: npm start
  */
-console.log('HEYYYYY');
-const logSomething = () => {
-    console.log('FILES LOGGED CHANGED');
-};
-logSomething();
-logSomething();
+const NumbersCollection_1 = require("./NumbersCollection");
+const CharactersCollection_1 = require("./CharactersCollection");
+const LinkedList_1 = require("./LinkedList");
+// ==============
+// ARRAY OF NUMBERS
+// ==============
+const numbersCollection = new NumbersCollection_1.NumbersCollection([10, 3, -5, 0]);
+numbersCollection.sort();
+console.log(numbersCollection.data);
+// ==============
+// CHARACTER STRINGS
+// ==============
+const charactersCollection = new CharactersCollection_1.CharactersCollection('Xaaayb');
+charactersCollection.sort();
+console.log(charactersCollection.data);
+// ==============
+// LINKED LIST
+// ==============
+const linkedList = new LinkedList_1.LinkedList();
+linkedList.add(500);
+linkedList.add(-10);
+linkedList.add(-3);
+linkedList.add(4);
+linkedList.sort();
+linkedList.print();
